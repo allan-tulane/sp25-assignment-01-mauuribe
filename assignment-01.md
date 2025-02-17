@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:**_________________________
+**Name:** Mauricio Uribe
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -12,36 +12,22 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
+.  Yes so we need to check 2^{n+1} is not in 0(2^n) The Big-O notation describes an upper bound on the growth rate of a function. To determine if 2^{n+1} is in 0(2^n), we need to check that there exist constants c and n0 such that: 2^{n+1} <= 2^n for all n>= n0 we can simplify and get 2<= c which means that c must be at least 2 therefore 2^{n+1} is in 0(2^n) with c = 2 and n0 =0, however, Big O notation typically ignores constant factors and lower ordered terms since 2^{n+1} = 2 x 2^n which is exactly twice 2^n, it grows at the same rate as 2^n but with a constant of 2, therefore, 2^{n+1} and 2^n are asymptotically equivalent and 2^n+1 is in 0(2^n)
 .  
-.  
-.  
-.  
-. 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
-.  
-.  
-.  
+.  No 2^{2^n} is not in 0(2^n) because Big O notation describes an upper bound on the growth rate of a function so in order to determine if 2^{2^n} is in 0(2^n) we need to check if there exists a constants c and n0 such that 2^{2^n} <= c x 2^n then we simplify to 2^{(2^n) - n} <= c as n increases 2^n -n grows without bound causing 2^{(2^n)-n} to increase exponentially therefore no constant c can satisfy this inequality for all n therefore 2^{2^n} grows much faster than 2^n and is not in 0(2^n)
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
+.  No, n^{1.01} is not in O((log n)^2) because big O notation describes an upper bound on the growth rate of a function. To determine if n^{1.01} is in O((log n)^2) we need to check if there exists a constant c and n0 such that n^{1.01} <= c x (log n)^2 for all n >= n0 as n increases n^1.01 grows polynomially while (log n)^2 grows logarithmically. Polynomial functions grow much faster than a logarithmic function as n becomes large. Therefore no constant c can satisfy this inequality for all n.
 .  
-.  
-.  
-.  
-
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
-.  
-.  
-.  
+.  Yes n^{1.01} is in Omega((log n)^2) because Big Omega notation describes a lower bound on the growth rate of a function. and to determine if n^{1.01} is in omega((log n)^2) we need to check if there exists a constant c and n0 such that n^{1.01} >= c x (log n)^2 for all n >= n0 as n increases, n^{1.01} grows polynomially while (log n)^2 grows logarithmicslly. Polynomial functions grow much faster than logarithmic functions as n becomes large. Therefore for a sufficiently large n, n^{1.01} will always be greater than or equal to c x (log n)^2 for some constant c
+.   
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
-.  
-.  
-.  
+.  No, sqrt(n) is not in O((\mathrm{log} n)^3) because in Big O notation describes an upper bound on the growth rate of a function. TO determine if sqrt(n) is in O((\mathrm{log} n)^3) we need to check if there exists a constan c and n0 such that sqrt(n) <= c x (log n)^3 for all n >= n0 as n increases, sqrt(n) grows polynomially while (log n)^3 grows logarithmically. Polynomical functions grow much faster than logarithmic functions as n becomes large. Therefore no contant c can satisfy this inequality for all n.
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
-.  
-
+.  Yes, sqrt(n) is in Omega((\mathrm{log} n)^3), because Big Omega notation describes a lower bound on the growth rate of a function. SO to determine if sqrt(n) is in Omega((\mathrm{log} n)^3) we need to check if there exists contants c and n0 such that sqrt(n) >- c x (log n)^3 for all n >= 0. As n increases sqrt(n) grows polynomially while (log n)^3 grows logarithmically. Polynomial functions grow much faster than logarithmic functions as n becomes large. Therefore for a sufficiently large n sqrt(n) will always be greater than or equal to c x (log n )^3 for some constant c.
 
 2. **SPARC to Python** (12 pts)
 
