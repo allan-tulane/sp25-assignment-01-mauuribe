@@ -48,7 +48,7 @@ $$
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  
+.  The function foo computes the fibonacci number for a given integer x. The fibonacci sequence is a series of numbers where each number is the sum of the two numbers beofre starting from 0 and 1.
 .  
 .  
 .  
