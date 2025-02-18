@@ -78,7 +78,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3b. (4 pts) What is the Work and Span of this implementation?  
 
-.  
+.  Work represents the total number of operations performed by the algorithm. In this case each iteration processes one element of the list performing a constant amount of work per element. Span is the longest sequence of dependent operations that must be executed sequentially. In this iterative implementation each operation is independent of the others with no dependencies between iterations. Work = T1 = O(n) and span is T∞ = 0(1)
 .  
 .  
 .  
